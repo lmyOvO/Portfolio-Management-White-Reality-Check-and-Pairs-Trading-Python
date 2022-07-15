@@ -1,0 +1,33 @@
+Note on the installation of the database of ETF names that helps run ReversionYesLoopMod_DISTRIBUTED.py
+
+ReversionYesLoopMod_DISTRIBUTED.py has a line that refers to a database of ETF names called PythonData.db:
+
+#set the database file path we wish to connect to
+#this will obviously be unique to wherever you created
+#the SQLite database on your local system
+database = 'C:\sqlite\PythonData.db'
+
+as you can see above, the PythonDabta.db is supposed to be in a directory called sqlite in the C directory. 
+Go ahead and setup the sqlite directory within the C directory and copy and paste the PythonData.db flat file there.
+That is all you need to be able to run ReversionYesLoopMod_DISTRIBUTED.py
+
+However you can do more.
+If you install DB.Browser.for.SQLite-3.10.1-win64.exe (you just need to double-click it) you will be able
+to open the PythonData.db and look into its tables.
+So go ahead and install DB.Browser.for.SQLite-3.10.1-win64.exe 
+Once you install it, run Programs> DB Browser for SQL lite
+Press Open Database
+Browse to and select C:\sqlite\PythonData.db
+Select etftable (or etftable2, they are very similar) inside the Database Structure tab
+Select the tab Browse Data
+you will see the contents of the table
+For example if you want to see all the currency ETFs, just press the column Asset Class and in the filter write Currency
+or just press the column Asset Class and the asset classes will organize alphabetically and Currency will appear in the expected order
+
+
+You do not need to install anything else but if you want you can install sqllite also
+this will enable you to create other sqllite databases
+for this purpose, I have included sqlite-dll-win64-x64-3240000.zip and sqlite-tools-win32-x86-3240000.zip
+
+
+
